@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blueviolet;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    width: 105%;
+    top: 0;
+    padding: 10px;
+    background-color: #021373;
+    z-index: 1000;
+    
+}
+header:hover{
+    border-bottom: 1px solid wheat;
+}
+header .logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    filter: drop-shadow(0px 0px 10px blueviolet);
+}
+header nav{
+    position: absolute;
+    left: 50px;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    padding: 10px;
+    font-family:serif;
+    font-weight: lighter;
+    text-decoration: none;
+    filter: drop-shadow(0 5px 10px black);
+    cursor: pointer;
+}
+nav ul li a:hover{
+    text-decoration: none;
+}
+nav ul li a:active{
+    background-color: aqua;
+    border-radius: 10px;
+    text-decoration: none;
+}
+i.fa-bars{
+    display: none;
+}
+#moi{
+    padding: 50px;
+    margin-top: 200px;
+    display: flex;
+    gap: 100px;
+   
+}
+#moi .img-circle{
+    max-width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px blueviolet;
+}
+#moi div h2{
+    color: cadetblue;
+}
+.lelead{
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+span{
+    cursor: pointer;
+}
+span::before{
+    background-color: darkgreen;
+}
+#moi .btn{
+    margin: 20px;
+}
+#monDiv div img{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    margin: 10px;
+}
+#Projects{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #021373;
+}
+#Projects .pro{
+    text-align: center;
+}
+#Projects span{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0px 0px 5px blueviolet;
+}
+#about{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap:50px;
+}
+#about img{
+    height: 500px;
+    max-width: 400px;
+    border: 1px solid ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px wheat;
+}
+.about{
+    border-radius: 10px;
+   box-shadow: 0px 0px 10px wheat;
+   margin-left: 10px
+
+}
+h5{
+    text-align: center;
+    font-weight: 500;
+}
+.log{
+    display: flex;
+    flex-direction: row;
+}
+.menu{
+    display: none;
+}
+.fas{
+    bottom: 5px;
+    background-color: darkgray;
+    border-radius: 100%;
+    align-self: center;
+    padding: 5px;
+    cursor: pointer;
+    color: khaki;
+}
+#Touch{
+    padding-bottom: 30px;
+    margin: 20px;
+}
+#Touch li{
+    list-style: none;
+    margin: 10px;
+}
+#Touch img{
+    border: 1px solid;
+    border-radius: 10px;
+    height: 400px;
+    max-width: 700px;
+    margin-left: 90px;
+    box-shadow: 0px 0px 10px wheat;
+}
+
+.opp{
+  
+    text-align: center;
+}
+#Skill{
+    margin-top: 30px;
+}
+#Skill .row div{
+   border: 1px  wheat;
+   border-radius: 10px;
+   margin: 50px;
+   box-shadow: 0px 0px 10px wheat;
+   padding: 20px;
+   
+}
+.form{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px wheat;
+    margin: 20px;
+}
+footer{
+
+    padding: 20px;
+   
+    background-color: #021373;
+}
+span:active{
+    background-color: forestgreen;
+}
+
+.trans{
+    color: lightyellow;
+    opacity: 0.2;
+}
+footer ul li{
+    list-style: none;
+}
+@media (max-width:1060px) {
+    i.fa-bars{
+        display: block;
+        margin: 20px;
+    }
+    nav{
+        display: none !important;
+    }
+    img{
+        width: auto;
+    }
+    header{
+        background-color:  cadetblue;
+    }
+    #Touch img{
+        width: auto;
+        margin-left: 0;
+    }
+    #about img{
+        width: 300px;
+    }
+    body{
+        overflow-x: hidden;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu{
+        display: block;
+        width: 100%;
+        background-color: black;
+        opacity: 0.8;
+        position: relative;
+        position: fixed;
+        top: 0;
+        text-align: center;
+        z-index: 20000;
+        display: none;
+    }
+    .menu li{
+        margin: 5px;
+    }
+    .menu a{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-large;
+        color:blue;
+    }
+    .fa-close{
+        left: 50%;
+    }
+}
