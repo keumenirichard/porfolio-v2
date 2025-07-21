@@ -1,10 +1,22 @@
+/* @font-face {
+        font-family:'Candy' ;
+        src: url(Dafont\candy_scratchones\Candy.otf) format('otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family:'BlytnutterDEMO' ;
+        src: url(Dafont\blystnutter\BlytnutterDEMO.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    } */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
-    background: blueviolet;
+    background-color: #f9f9f9;;
     overflow-x: hidden;
 }
 header{
@@ -26,13 +38,14 @@ header .logo{
 header nav{
     position: absolute;
     left: 50px;
+    margin-right: 100px;
 }
 nav ul li{
     margin-left: 20px;
 }
 nav ul li a{
     padding: 10px;
-    font-family:serif;
+    font-family:'KindestReality_DEMO';
     font-weight: lighter;
     text-decoration: none;
     filter: drop-shadow(0 5px 10px black);
@@ -53,20 +66,26 @@ i.fa-bars{
     display: none;
 }
 #moi{
-    padding: 50px;
-    margin-top: 200px;
+    padding: 50px ;
+    padding-top: 150px;
     display: flex;
     gap: 100px;
    
 }
 #moi .img-circle{
-    max-width: 200px;
+    width: 200px;
     height: 200px;
     border-radius: 100%;
     box-shadow: 0px 0px 10px blueviolet;
+    margin-left: 150px;
+    transition: 0.3s;
+}
+#moi .img-circle:hover{
+  transform: rotate(60deg);
 }
 #moi div h2{
     color: cadetblue;
+    margin-left: 5px;
 }
 .lelead{
     padding-top: 10px;
@@ -84,24 +103,36 @@ span::before{
 }
 #monDiv{
     display: flex;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
-#monDiv div img{
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px white;
-    margin: 10px;
+button:hover{
+    letter-spacing: 5px;
     
 }
-#Projects{
+
+
+#monDiv div{
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    width: 290px;
+}
+#monDiv p{
+    text-align: center;
+    color: lightslategrey;
+}
+#Projects{ 
     padding: 20px;
-    width: 100%;
     display: flex;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #021373;
+    color: limegreen;
 }
 #Projects .pro{
     text-align: center;
@@ -117,26 +148,34 @@ span::before{
     justify-content: center;
     align-items: center;
 
-    gap:50px;
+    gap:70px;
 }
 #about img{
     height: 500px;
-    max-width: 400px;
+    width: 100%;
     border: 1px solid ;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px wheat;
+    box-shadow: 0px 0px 10px #021373;
+    margin-left: 100px;
 }
 .about{
-    border-radius: 10px;
-    height: 500px;
     
+    border-radius: 10px;
+    padding-top: 10px;
+    min-height: 500px;
+    margin-left: 20px;
    box-shadow: 0px 0px 10px wheat;
-   margin-left: 10px
+   font-family: 'Open Sans', sans-serif;
+   font-size: 16px;
+   color: #333;
 
 }
-h5{
+
+body h5{
     text-align: center;
-    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color:black;
 }
 .log{
     display: flex;
@@ -147,7 +186,6 @@ h5{
 }
 .fas{
     bottom: 5px;
-    background-color: darkgray;
     border-radius: 100%;
     align-self: center;
     padding: 5px;
@@ -156,7 +194,9 @@ h5{
 }
 #Touch{
     padding-bottom: 30px;
-    margin: 20px;
+    padding: 20px;
+    background-color: lightgrey;
+    width: 100%;
 }
 #Touch li{
     list-style: none;
@@ -168,7 +208,7 @@ h5{
     height: 400px;
     max-width: 700px;
     margin-left: 90px;
-    box-shadow: 0px 0px 10px wheat;
+    box-shadow: 0px 0px 10px #021373;
 }
 
 .opp{
@@ -185,7 +225,12 @@ h5{
    box-shadow: 0px 0px 10px wheat;
    padding: 20px;
    
+   
 }
+#Skill .row div:hover{
+  letter-spacing: 3px;
+}
+
 .form{
     padding: 10px;
     border: 1px solid transparent;
@@ -194,10 +239,9 @@ h5{
     margin: 20px;
 }
 footer{
-
     padding: 20px;
-   
     background-color: #021373;
+    
 }
 span:active{
     background-color: forestgreen;
@@ -209,6 +253,18 @@ span:active{
 }
 footer ul li{
     list-style: none;
+    color: lightcoral;
+}
+footer h6{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fa-star{
+    color: green;
+}
+#veriFormulaire{
+    color:red;
+    text-align: center;
 }
 @media (max-width:1060px) {
     i.fa-bars{
@@ -231,27 +287,37 @@ footer ul li{
     #about img{
         width: 300px;
     }
-    body{
+    html, body{
         overflow-x: hidden;
-        width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: black;
 
     }
     #monDiv{
-      margin-left: 13.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+    }
+    #monDiv div{
+        width: 100%;
+    }
+    #monDiv div img{
+        width: 100%;
     }
     .menu{
         display: block;
-        width: 100%;
+        width: 50%;
         background-color: black;
         opacity: 0.8;
         position: relative;
         position: fixed;
         top: 0;
-        text-align: center;
+        left: 0;
+        padding: 10px 10px 10px 0px;
         z-index: 20000;
         display: none;
     }
@@ -265,5 +331,23 @@ footer ul li{
     }
     .fa-close{
         left: 50%;
+        color: red;
     }
+    footer{
+        background-color: lightblue;
+    }
+     #moi{
+        background-color: lightpink;
+     }
+    body h5{
+        font-size: 30px;
+    }
+    #about img{
+        margin-left: 30px;
+    }
+
+    #Projects{
+        letter-spacing: 3px;
+    }
+    
 }
