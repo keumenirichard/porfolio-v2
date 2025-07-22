@@ -18,22 +18,16 @@ const subject=document.getElementById("subject");
 const message=document.getElementById("message");
 const verfication=document.getElementById('veriFormulaire');
 const regexEmail=/^[a-zA-Z0-9._-]+@[a-z]{2,}\.[a-z]{2,4}$/;
-const regexName=/^[a-zA-Z0-9]$/;
-const avis=[];
+const avis=[]
 form.addEventListener('submit', function(e){
    e.preventDefault();
-  if(!(regexEmail.test(email.value)) || !(regexName.test(nom.value)) || ( message.value=="")){
-     verfication.innerHTML='<i class="fas fa-warning"></i>Veuiller remplir correctement les champs!!!'
-     console.log(message.value)
+  if(!(regexEmail.test(email.value)) || (nom.value<2) || ( message.value=="")){
+     verfication.innerHTML='<i class="fas fa-warning fa-2x"></i> Veuiller remplir correctement les champs!!!'
   }else{
-   while(true){
-   let i;
-   avis.push({nom:'nom.value', email:'email.value', subject:'subject.value', message:'message.value',id:'i'})
-   i++;
-   }
+    verfication.innerHTML='<i class="fas fa-check fa-2x"></i> Données enregistrées!!!<h5>Bonjour '+nom.value+ '</h5>'
+    avis.push({name:nom.value, email:email.value, subject:subject.value, message:message.value})
   }
-  console.log(avis)
-   
+   console.log(avis)
 })
 
 elements.addEventListener('click', function(e){
@@ -41,16 +35,16 @@ elements.addEventListener('click', function(e){
 
    switch(val){
       case 'All':
-         div.innerHTML="Aucun Projet disponible pour le moment..."
+         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
       break;
       case 'Web':
-          div.innerHTML="Aucun Projet disponible pour le moment..."
+         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
       break;
       case 'Ai':
-         div.innerHTML="Aucun Projet disponible pour le moment..."
+        div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
       break;
       default:
-         div.innerHTML="Aucun Projet disponible pour le moment..."
+          div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
 
    }
 });

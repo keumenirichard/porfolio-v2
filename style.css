@@ -269,6 +269,9 @@ footer h6{
     color:red;
     text-align: center;
 }
+.fa-check{
+    color: green;
+}
 @media (max-width:1060px) {
     i.fa-bars{
         display: block;
@@ -348,8 +351,14 @@ footer h6{
     body h5{
         font-size: 30px;
     }
+    #Touch{
+        width: 100%;
+    }
     #about img{
         margin-left: 20px;
+    }
+    .form{
+        background-color: lightslategray;
     }
 
     #Projects{
