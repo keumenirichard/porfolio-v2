@@ -28,6 +28,7 @@ header{
     z-index: 1000;
     
 }
+
 header:hover{
     border-bottom: 1px solid wheat;
 }
@@ -82,11 +83,15 @@ i.fa-bars{
     transition: 0.3s;
 }
 #moi .img-circle:hover{
-  transform: rotate(60deg);
+  transform: rotate(90deg);
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #moi div h2{
     color: cadetblue;
     margin-left: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .lelead{
     padding-top: 10px;
@@ -144,28 +149,25 @@ button:hover{
     box-shadow: 0px 0px 5px blueviolet;
 }
 #about{
-    padding-top: 20px;
+    padding: 70px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+     justify-content: space-evenly;
+     gap: 170px;
 
-    gap:70px;
 }
 #about img{
     height: 500px;
     width: 100%;
     border: 1px solid ;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #021373;
-    margin-left: 100px;
+    box-shadow: 0px 0px 5px #021373;
 }
 .about{
     
     border-radius: 10px;
-    padding-top: 10px;
+    padding: 20px;
     min-height: 500px;
-    margin-left: 20px;
-   box-shadow: 0px 0px 10px wheat;
+   box-shadow: 0px 0px 5px black;
    font-family: 'Open Sans', sans-serif;
    font-size: 16px;
    color: #333;
@@ -227,7 +229,7 @@ body h5{
    margin: 50px;
    box-shadow: 0px 0px 10px wheat;
    padding: 20px;
-   
+    background-color: darkslategray;
    
 }
 #Skill .row div:hover{
@@ -280,6 +282,10 @@ footer h6{
     nav{
         display: none !important;
     }
+    #Skill .row div{
+        background-color: lightslategray;
+      
+    }
     img{
         width: auto;
     }
@@ -290,22 +296,30 @@ footer h6{
         width: auto;
         margin-left: 0;
     }
+    #about{
+     display: flex;
+     flex-direction: column;
+     gap: -50px;
+     place-items: center;
+    }
+    .about{
+        width: 100%;
+         min-width:300px;
+    }
+    .about p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
     #about img{
-        width: 300px;
+        min-width:300px;
+        margin-top:-90px;
     }
     html, body{
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
-
+        overflow-x: hidden !important;
+       min-width:100% ;
     }
     #monDiv{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         place-items: center;
     }
     #monDiv div{
@@ -315,11 +329,16 @@ footer h6{
         width: 100%;
     }
     header{
-        max-width: 100%;
+        min-width:100%;
+        right:0;
+
+    }
+    .fas{
+        color: #021373;
     }
     .menu{
         display: block;
-        width: 55%;
+        width: 65%;
         background-color: black;
         opacity: 0.8;
         position: relative;
@@ -344,25 +363,36 @@ footer h6{
     }
     footer{
         background-color: lightblue;
+         place-items: center;
     }
-     #moi{
-        background-color: lightpink;
-     }
+    #moi{
+        background-color: dimgrey;
+    }
+    #moi p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
     body h5{
         font-size: 30px;
     }
     #Touch{
         width: 100%;
+        place-items: center;
     }
-    #about img{
-        margin-left: 20px;
+    #Touch img{
+       margin-left: 20px;
     }
     .form{
         background-color: lightslategray;
+        box-shadow: 0px 0px 10px black;
     }
-
+    .fa-star, .fa-check{
+      color: green;
+    }
     #Projects{
         letter-spacing: 3px;
+    }
+    .fa-warning{
+        color: yellow;
     }
     
 }
