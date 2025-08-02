@@ -17,6 +17,8 @@ const email=document.getElementById("email");
 const subject=document.getElementById("subject");
 const message=document.getElementById("message");
 const verfication=document.getElementById('veriFormulaire');
+const element=document.getElementById("texte2");
+
 const regexEmail=/^[a-zA-Z0-9._-]+@[a-z]{2,}\.[a-z]{2,4}$/;
 const avis=[]
 form.addEventListener('submit', function(e){
@@ -35,16 +37,16 @@ elements.addEventListener('click', function(e){
 
    switch(val){
       case 'All':
-         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
+        div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
       break;
       case 'Web':
-         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
+         div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
       break;
-      case 'Ai':
+      case 'Mobile':
         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
       break;
       default:
-          div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
+          div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
 
    }
 });
@@ -59,7 +61,15 @@ close.addEventListener('click',()=>{
     close.style.display='block'
     hamburger.style.display='block';
 });
-
-
+texte="KEUMENI Albertini"
+var index =0
+function ecrireTexte(){
+     if(index<texte.length){
+        element.textContent+=texte[index];
+        index++
+      setTimeout(ecrireTexte, 1000);
+   }
+}
+ecrireTexte()
   
 
