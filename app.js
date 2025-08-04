@@ -35,6 +35,7 @@ form.addEventListener('submit', function(e){
 elements.addEventListener('click', function(e){
    const val= e.target.textContent;
 
+
    switch(val){
       case 'All':
         div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
