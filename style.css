@@ -118,7 +118,9 @@ button:hover{
     letter-spacing: 5px;
     
 }
-
+#site a{
+   margin-left: 5px;
+}
 #monDiv div{
     border-radius: 10px;
     width: 300px;
@@ -276,6 +278,9 @@ footer h6{
 }
 .fa-check{
     color: green;
+}
+#all{
+    background-color: green;
 }
 @media (max-width:1060px) {
     i.fa-bars{

@@ -1,7 +1,7 @@
 
 const all=document.getElementById("all");
 const web=document.getElementById("web");
-const ia=document.getElementById("ia");
+const mobile=document.getElementById("mobile");
 const div=document.getElementById("monDiv");
 const elements=document.getElementById("elements");
 const menu=document.getElementById("menu");
@@ -38,16 +38,24 @@ elements.addEventListener('click', function(e){
    switch(val){
       case 'All':
         div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
+        all.style.backgroundColor='green'
+        mobile.style.backgroundColor=''
+         web.style.backgroundColor=''
       break;
       case 'Web':
          div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
+          web.style.backgroundColor='green'
+         all.style.backgroundColor='#021373'
+         mobile.style.backgroundColor=''
       break;
       case 'Mobile':
         div.innerHTML="<p>Aucun Projet disponible pour le moment...<p/>"
+         mobile.style.backgroundColor='green'
+         all.style.backgroundColor='#021373'
+          web.style.backgroundColor=''
       break;
       default:
-          div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp" width="400px" height="300px"><div/>'
-
+          div.innerHTML='<div><img src="Images/todoapp.png" alt="todoapp"  height="300px"><div/>'
    }
 });
 
